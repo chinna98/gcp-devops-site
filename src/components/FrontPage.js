@@ -1,26 +1,26 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import '../styles/FrontPage.css'; // For custom styles
 
-const TEXT_COLOR = 'rgba(0, 255, 0, 0.9)';  // Green color for text
-const BACKGROUND_COLOR = 'rgba(0, 0, 0, 0.8)'; // Black color for background
-const ALPHA_BACKGROUND_COLOR = '#00000018'; // Semi-transparent black
-const FONT = '15pt monospace'; // Font style
-const TEXT_COLUMN_WIDTH = 20; // Width of each column
-const FPS = 20; // Frames per second
+// Constants
+const TEXT_COLOR = 'rgba(0, 255, 0, 0.9)';
+const BACKGROUND_COLOR = 'rgba(0, 0, 0, 0.8)';
+const ALPHA_BACKGROUND_COLOR = '#00000018';
+const FONT = '15pt monospace';
+const TEXT_COLUMN_WIDTH = 20;
+const FPS = 20;
 
-function getPseudoRandomInRange(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+// Utility function
+const getPseudoRandomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
+// MatrixBackground Component
 function MatrixBackground({ destroyMode }) {
     const matrixCanvasRef = useRef(null);
 
-    const initializeMatrixCanvas = () => {
+    const initializeMatrixCanvas = useCallback(() => {
         if (!matrixCanvasRef.current) return;
 
         const canvas = matrixCanvasRef.current;
         const canvasContext = canvas.getContext('2d');
-
         if (!canvasContext) return;
 
         canvas.width = window.innerWidth;
@@ -30,17 +30,14 @@ function MatrixBackground({ destroyMode }) {
         canvasContext.fillRect(0, 0, canvas.width, canvas.height);
 
         const numberOfColumns = Math.floor(canvas.width / TEXT_COLUMN_WIDTH) + 1;
-        const defaultYPositions = Array(numberOfColumns).fill(0);
+        return Array(numberOfColumns).fill(0);
+    }, []);
 
-        return defaultYPositions;
-    };
-
-    const drawMatrix = (yPositions) => {
+    const drawMatrix = useCallback((yPositions) => {
         if (!matrixCanvasRef.current) return;
 
         const canvas = matrixCanvasRef.current;
         const canvasContext = canvas.getContext('2d');
-
         if (!canvasContext) return;
 
         canvasContext.fillStyle = ALPHA_BACKGROUND_COLOR;
@@ -52,91 +49,67 @@ function MatrixBackground({ destroyMode }) {
         const newYPositions = yPositions.map((y, index) => {
             const char = String.fromCharCode(getPseudoRandomInRange(33, 126));
             const x = index * TEXT_COLUMN_WIDTH;
-
             canvasContext.fillText(char, x, y);
 
-            const shouldResetYPosition = y > canvas.height;
-            return shouldResetYPosition ? 0 : y + 20;
+            return y > canvas.height ? 0 : y + 20;
         });
 
         return newYPositions;
-    };
+    }, []);
 
     useEffect(() => {
-        const defaultYPositions = initializeMatrixCanvas();
-
+        const yPositions = initializeMatrixCanvas();
         window.addEventListener('resize', initializeMatrixCanvas);
 
-        const animate = (yPositions) => {
-            const newYPositions = drawMatrix(yPositions);
-
-            if (newYPositions) {
-                setTimeout(() => {
-                    animate(newYPositions);
-                }, 1000 / FPS);
+        const animate = (positions) => {
+            const newPositions = drawMatrix(positions);
+            if (newPositions) {
+                setTimeout(() => animate(newPositions), 1000 / FPS);
             }
         };
 
-        if (defaultYPositions) animate(defaultYPositions);
+        if (yPositions) animate(yPositions);
 
-        return () => {
-            window.removeEventListener('resize', initializeMatrixCanvas);
-        };
-    }, [drawMatrix, initializeMatrixCanvas]);
+        return () => window.removeEventListener('resize', initializeMatrixCanvas);
+    }, [initializeMatrixCanvas, drawMatrix]);
 
     useEffect(() => {
-        if (destroyMode) {
-            document.body.style.overflow = 'hidden'; // Disable scrolling
-            document.body.style.position = 'fixed'; // Lock the body in place
-            document.body.style.top = `-${window.scrollY}px`; // Adjust for current scroll position
-            document.body.style.width = '100%'; // Ensure width is 100%
-        } else {
-            document.body.style.overflow = ''; // Reset overflow to default (enabled scrolling)
-            document.body.style.position = ''; // Reset position
-            document.body.style.top = ''; // Reset top
-            document.body.style.width = ''; // Reset width
-        }
+        document.body.style.overflow = destroyMode ? 'hidden' : '';
+        document.body.style.position = destroyMode ? 'fixed' : '';
+        document.body.style.top = destroyMode ? `-${window.scrollY}px` : '';
+        document.body.style.width = destroyMode ? '100%' : '';
     }, [destroyMode]);
 
-    return (
-        <canvas
-            ref={matrixCanvasRef}
-            aria-label="Matrix background"
-            className="matrix-background"
-        />
-    );
+    return <canvas ref={matrixCanvasRef} className="matrix-background" aria-label="Matrix background" />;
 }
 
+// FrontPage Component
 function FrontPage() {
     const [destroyMode, setDestroyMode] = useState(false);
 
     useEffect(() => {
-        document.body.style.overflow = 'hidden'; // Disable scrolling on initial load
-        document.body.style.position = 'fixed'; // Lock the body in place
-        document.body.style.width = '100%'; // Ensure width is 100%
+        document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
 
         return () => {
-            document.body.style.overflow = ''; // Reset overflow on component unmount
-            document.body.style.position = ''; // Reset position
-            document.body.style.width = ''; // Reset width
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
         };
     }, []);
 
     const handleHover = (event) => {
-        if (destroyMode) {
-            event.target.style.display = 'none';
-        }
+        if (destroyMode) event.target.style.display = 'none';
     };
 
-    const handleDestroyClick = () => {
-        setDestroyMode(true);
-    };
+    const handleDestroyClick = () => setDestroyMode(true);
 
     const handleEnterClick = () => {
-        document.body.style.overflow = ''; // Enable scrolling
-        document.body.style.position = ''; // Reset position
-        document.body.style.width = ''; // Reset width
-        window.location.href = `${process.env.PUBLIC_URL}/#intro`; // Redirect to the portfolio section
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+        window.location.href = `${process.env.PUBLIC_URL}/#intro`;
     };
 
     return (
@@ -148,8 +121,8 @@ function FrontPage() {
                     <span>All I'm offering is the truth.</span>
                 </h1>
                 <div className="button-group">
-                    <button onClick={handleEnterClick} disabled={destroyMode} className='btn btn-one'>Enter</button>
-                    <button onClick={handleDestroyClick} disabled={destroyMode} className='btn btn-two'>Crash this Website</button>
+                    <button onClick={handleEnterClick} disabled={destroyMode} className="btn btn-one">Enter</button>
+                    <button onClick={handleDestroyClick} disabled={destroyMode} className="btn btn-two">Crash this Website</button>
                 </div>
             </div>
         </div>
