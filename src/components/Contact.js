@@ -27,9 +27,9 @@ function Contact() {
         });
     };
 
-    const closeModal = () => {
-        setModalOpen(false);
-    };
+//    const closeModal = () => {
+//        setModalOpen(false);
+//    };
 
     return (
         <div id="contact">
