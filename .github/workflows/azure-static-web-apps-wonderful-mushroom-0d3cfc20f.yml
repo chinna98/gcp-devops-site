@@ -30,12 +30,12 @@ jobs:
       # Install dependencies
       - name: Install dependencies
         run: |
-          npm install # Or 'yarn install' if using Yarn
+          npm install --legacy-peer-deps
 
       # Build the app (if applicable)
       - name: Build the app
         run: |
-          npm run build # Or 'yarn build', depending on your setup
+          npm run build
 
       # Deploy to Azure Static Web Apps
       - name: Deploy
