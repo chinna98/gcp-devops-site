@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
- // Make sure to include your CSS file
 
 const SocialIcons = () => {
   const location = useLocation();
@@ -42,7 +41,7 @@ const SocialIcons = () => {
       {visible && (
         <div className="social-icons">
           <a
-            href=""
+            href="https://www.linkedin.com/in/your-profile" // Replace with your LinkedIn profile URL
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -50,7 +49,7 @@ const SocialIcons = () => {
             <FaLinkedin />
           </a>
           <a
-            href=""
+            href="https://github.com/your-username" // Replace with your GitHub profile URL
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -58,7 +57,7 @@ const SocialIcons = () => {
             <FaGithub />
           </a>
           <a
-            href=""
+            href="https://instagram.com/your-username" // Replace with your Instagram profile URL
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
