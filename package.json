@@ -11,6 +11,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.6.1",
+    "caniuse-lite": "^1.0.30001695",
     "howler": "^2.2.4",
     "p5": "^1.5.0",
     "react": "^18.3.1",
