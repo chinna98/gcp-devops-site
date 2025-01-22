@@ -41,15 +41,15 @@ function Contact() {
                     <h2>Get in Touch</h2>
                     <div className="contact-details">
                         <div className="contact-item">
-                            <a href="https://wa.me/918925419205" className="contact-info-text">
+                            <a href="https://wa.me/916300572544" className="contact-info-text">
                                 <FaPhone className="contact-icon" />
                                 &nbsp; +91 8925419205
                             </a>
                         </div>
                         <div className="contact-item">
-                            <a href="mailto:Chinnanov5@gmail.com" className="contact-info-text">
+                            <a href="mailto:info@learngcpdevops.com" className="contact-info-text">
                                 <FaEnvelope className="contact-icon" />
-                                &nbsp; Chinnanov5@gmail.com
+                                &nbsp; info@learngcpdevops.com
                             </a>
                         </div>
                     </div>

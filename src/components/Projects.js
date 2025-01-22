@@ -30,59 +30,47 @@ class Projects extends React.Component {
 
   render() {
     const projects = {
-      "Tomato": {
-        desc: "Developed a full-stack food delivery application with user authentication, Stripe integration for payments, and an admin panel to manage food items and order statuses.",
-        techStack: "MongoDB, Express.js, React, Node.js",
-        link: "https://github.com/Chinna/food-del",
-        open: "https://food-del-1-o79x.onrender.com/"
+      "Email Security Project - Broadcom Inc": {
+        desc: "Migrated applications from Ansible to Kubernetes on GKE using Helm and CI/CD pipelines in GitLab and Jenkins, automating GCP infrastructure with Terraform.",
+        techStack: "GCP, GKE, Terraform, Helm, Jenkins, GitLab, Bitbucket, Ansible, Python, Shell scripting",
+        link: "https://github.com/Chinna/email-security-project",
+        open: "https://broadcom.com/email-security"
       },
-      "Tomato Admin Panel": {
-        desc: "Created an admin panel for the food delivery app where admins can add and delete food items, view user order details, and change order statuses.",
-        techStack: "MongoDB, Express.js, React, Node.js",
-        link: "https://github.com/Chinna/food-del",
-        open: "https://food-del-admin-fouz.onrender.com/orders"
+      "ONDC": {
+        desc: "Implemented GKE-based solutions with Terraform for efficient management of cloud resources, integrating Helm charts for app deployments.",
+        techStack: "GKE, Terraform, Helm, Kubernetes",
+        link: "https://github.com/Chinna/ondc",
+        open: "https://ondc-project.com"
       },
-      "Anime Games Hub": {
-        desc: "A website that combines my passion for anime and learning JavaScript to create interactive anime-themed games. It showcases a blend of anime aesthetics and coding skills.",
-        techStack: "HTML, CSS,JavaScript",
-        link: "https://github.com/Chinna/anime-hub",
-        open: "https://Chinna.github.io/anime-hub/"
+      "GKE Clusters": {
+        desc: "Managed 40+ GKE clusters for multi-tenant environments, automated GKE upgrades, and developed security policies for robust cloud management.",
+        techStack: "GKE, Kubernetes, Terraform, Helm, Docker, GCP",
+        link: "https://github.com/Chinna/sabre",
+        open: "https://sabre-project.com"
       },
-      "Analytics Dashboard": {
-        desc: "An interactive analytics dashboard was created using React, with Chart.js integrated for real-time data visualizations.",
-        techStack: "React, Chart.js, Local Storage, CSS/SCSS",
-        link: "https://github.com/Chinna/e-commerce_website",
-        open: "https://Chinna.github.io/seller-app/"
+      "CI/CD Automation for Infrastructure": {
+        desc: "Created automated CI/CD pipelines using Terraform and Jenkins for seamless deployment of infrastructure across multiple environments.",
+        techStack: "Terraform, Jenkins, GKE, Docker, Kubernetes",
+        link: "https://github.com/Chinna/cicd-infrastructure",
+        open: "https://cicd-project.com"
       },
-      "Submission Desk": {
-        desc: "An efficient and secure portal for students to submit assignments. With user-friendly login and sign-up features, it streamlines the assignment submission process, ensuring seamless tracking and management of submissions.",
-        techStack: "MongoDB, Express.js, React, Node.js",
-        link: "https://github.com/Chinna/growthX",
-        open: "https://growthx-1-portal-student.onrender.com/"
+      "Kubernetes Infrastructure Automation": {
+        desc: "Automated Kubernetes cluster provisioning and app deployment using Helm and Terraform, enhancing workflow efficiency in cloud environments.",
+        techStack: "Kubernetes, Terraform, Helm, GKE",
+        link: "https://github.com/Chinna/kubernetes-automation",
+        open: "https://k8s-infrastructure.com"
       },
-      "Submission Desk Admin Panel": {
-        desc: "A comprehensive admin panel that allows administrators to view, approve, or reject student assignments, providing easy management and tracking of submissions.",
-        techStack: "MongoDB, Express.js, React, Node.js",
-        link: "https://github.com/Chinna/growthX",
-        open: "https://growthx-1-admin.onrender.com/"
+      "Dockerized Microservices": {
+        desc: "Developed a set of Dockerized microservices, each with Kubernetes orchestration and Helm charts for smooth deployment on GKE.",
+        techStack: "Docker, Kubernetes, Helm, GKE",
+        link: "https://github.com/Chinna/docker-microservices",
+        open: "https://docker-microservices.com"
       },
-      "Wanderlust": {
-        desc: "A travel website where you can book destinations and explore various travel options. This project was created to learn advanced CSS and SCSS techniques.",
-        techStack: "CSS/SCSS",
-        link: "https://github.com/Chinna/wanderlust_project/tree/master",
-        open: "https://Chinna.github.io/wanderlust_project/"
-      },
-      "Geo Mappy": {
-        desc: "Designed an API that allows clients to measure distance between multiple geo co-ordinates, using the Great Circle Distance algorithm. UI has a drag-drop functionality to mark points on the world map.",
-        techStack: "HTML5,CSS3,JavaScript,DistanceAlgorithms",
-        link: "https://github.com/Chinna/arcgis-measurement-app",
-        open: "https://Chinna.github.io/arcgis-measurement-app/"
-      },
-      "EcomX": {
-        desc: "A backend system designed for an e-commerce website, focusing on managing user interactions and product data to deliver a smooth and efficient shopping experience.",
-        techStack: "Java, Spring Boot, MySQL",
-        link: "https://github.com/Chinna/e-commerce_website",
-        open: ""
+      "Google Cloud Platform": {
+        desc: "Expert in GCP services like compute engine, GKE, CloudSQL, Anthos service mesh, Cloud service mesh,etc..",
+        techStack: "Docker, Kubernetes, Helm, GKE",
+        link: "https://github.com/Chinna/docker-microservices",
+        open: "https://docker-microservices.com"
       }
     };
 
@@ -137,5 +125,3 @@ class Projects extends React.Component {
 }
 
 export default Projects;
-
-

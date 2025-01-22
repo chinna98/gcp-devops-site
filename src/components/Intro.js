@@ -45,13 +45,13 @@ const Intro = () => {
 
         {isInView && (
           <Typist avgTypingDelay={100}>
-            <span className="intro-name">Developer👩‍💻</span>
+            <span className="intro-name">DevOps Engineer👩‍💻</span>
             <Typist.Backspace count={15} delay={600} />
             <span className="intro-name">Problem Solver &#x1F609;</span>
             <Typist.Backspace count={20} delay={600} />
-            <span className="intro-name">Globetrotter🌍✈️</span>
+            <span className="intro-name">Cloud Architect</span>
             <Typist.Backspace count={17} delay={600} />
-            <span className="intro-name">Fitness Fanatic💪</span>
+            <span className="intro-name">Cyber Security Engineer</span>
             <Typist.Backspace count={19} delay={600} />
             <span className="intro-name">Full Stack Developer👩‍💻</span>
           </Typist>
@@ -59,7 +59,7 @@ const Intro = () => {
 
         <FadeInSection>
           <div className="intro-subtitle">
-            Hi! I'm Chinna, a full-stack developer with a passion for coding. When I'm not knee-deep in code, I'm either working out or dreaming up my next travel destination. If you're into anime, let’s chat, I’d love to hear your favorite series or debate the best plot twists!
+           Hi! I'm Chinna, a seasoned DevOps Engineer specializing in GCP, Kubernetes (GKE), Docker, CI/CD pipelines, and security. With extensive expertise in tools like Jenkins and cloud-native technologies, I excel at optimizing workflows and driving robust, scalable solutions. Let's connect to discuss innovative solutions in the DevOps and cloud ecosystem!
           </div>
 
         </FadeInSection>

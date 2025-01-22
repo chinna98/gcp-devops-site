@@ -42,7 +42,7 @@ const SocialIcons = () => {
       {visible && (
         <div className="social-icons">
           <a
-            href="https://www.linkedin.com/in/Chinna13/"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -50,7 +50,7 @@ const SocialIcons = () => {
             <FaLinkedin />
           </a>
           <a
-            href="https://github.com/Chinna"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -58,7 +58,7 @@ const SocialIcons = () => {
             <FaGithub />
           </a>
           <a
-            href="https://www.instagram.com/a_n_u_r_a_d_h_a__?igsh=dGo3bnl3amwwZHd6"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"

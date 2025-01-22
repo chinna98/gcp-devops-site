@@ -8,14 +8,14 @@ const recommendationsData = [
     role: "Software Engineer",
     company: "Paylocity",
     photo: `${process.env.PUBLIC_URL}/assets/aikansh.jpg`,
-    review: "I had the pleasure of working with Chinna on several projects during my time at Fyle, and I can confidently say she’s one of the most driven interns I’ve worked with. She has an amazing ability to take on any challenge and learn quickly. Whether it was picking up new frameworks or diving into the latest technologies, she was always up for it.There were plenty of times when Chinna was able to debug tricky issues on her own without needing much support, which was really impressive. She also played a key role in improving our frontend performance and ensuring the codebase stayed clean and efficient.Chinna is passionate about what she does, and it shows in her work. I’d love to work with her again anytime and highly recommend her to any team looking for a talented and enthusiastic developer."
+    review: "I had the pleasure of working with Chinna on several projects during my time at Fyle, and I can confidently say He’s one of the most driven interns I’ve worked with. He has an amazing ability to take on any challenge and learn quickly. Whether it was picking up new frameworks or diving into the latest technologies, He was always up for it.There were plenty of times when Chinna was able to debug tricky issues on her own without needing much support, which was really impressive. He also played a key role in improving our frontend performance and ensuring the codebase stayed clean and efficient.Chinna is passionate about what He does, and it shows in her work. I’d love to work with her again anytime and highly recommend her to any team looking for a talented and enthusiastic developer."
   },
   {
     name: "Priya Chaudhary",
     role: "Graduate Engineer",
     company: "ANZ",
     photo: `${process.env.PUBLIC_URL}/assets/priya.png`,
-    review: "I’ve had the pleasure of working with Chinna at Fyle, and her strong grasp of frontend technologies is truly commendable. She has an excellent ability to translate complex requirements into seamless user experiences. Beyond her technical expertise, Chinna is a fantastic team player, always collaborative and supportive, making her a valuable asset to any team."
+    review: "I’ve had the pleasure of working with Chinna at Fyle, and her strong grasp of frontend technologies is truly commendable. He has an excellent ability to translate complex requirements into seamless user experiences. Beyond her technical expertise, Chinna is a fantastic team player, always collaborative and supportive, making her a valuable asset to any team."
   }
 ];
 
