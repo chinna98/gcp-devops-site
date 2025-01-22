@@ -7,7 +7,7 @@ import Modal from './Modal'; // Import the Modal component
 import ShiningButton from './Badge';
 
 function Contact() {
-    const [state, handleSubmit] = useForm("xldrbgpo"); // Replace with your Formspree ID
+    const [state, handleSubmit] = useForm("meoejdbl"); // Replace with your Formspree ID
     const [modalOpen, setModalOpen] = useState(false); // Track modal visibility
     const [formState, setFormState] = useState({
         name: "",
@@ -43,7 +43,7 @@ function Contact() {
                         <div className="contact-item">
                             <a href="https://wa.me/916300572544" className="contact-info-text">
                                 <FaPhone className="contact-icon" />
-                                &nbsp; +91 8925419205
+                                &nbsp; +91 6300572544
                             </a>
                         </div>
                         <div className="contact-item">

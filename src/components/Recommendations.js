@@ -69,7 +69,7 @@ const Recommendations = () => {
         )}
         <div className="section-header">
           <span className="section-title">
-            What My Exes (colleagues) Have to Say 😉
+            What My colleagues Have to Say 😉
           </span>
 
         </div>
