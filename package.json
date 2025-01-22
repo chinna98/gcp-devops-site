@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "autoprefixer": "^10.4.20",
     "bootstrap": "^4.6.1",
     "caniuse-lite": "^1.0.30001695",
     "howler": "^2.2.4",
@@ -55,6 +56,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^3.2.3",
     "prettier": "^2.2.1"
   },
