@@ -6,17 +6,17 @@ const Experience = () => {
   const experienceRef = useRef(null);
 
   const skills = [
-    { name: 'Sass', image: `${process.env.PUBLIC_URL}/assets/icons8-sass-avatar.svg` },
-    { name: 'JavaScript', image: `${process.env.PUBLIC_URL}/assets/icons8-javascript.svg` },
+    { name: 'Kubernetes', image: `${process.env.PUBLIC_URL}/assets/icons8-sass-avatar.svg` },
+    { name: 'Google Cloud Platform', image: `${process.env.PUBLIC_URL}/assets/icons8-javascript.svg` },
     { name: 'HTML5', image: `${process.env.PUBLIC_URL}/assets/icons8-html5.svg` },
-    { name: 'React', image: `${process.env.PUBLIC_URL}/assets/react.png` },
-    { name: 'CSS3', image: `${process.env.PUBLIC_URL}/assets/icons8-css3.svg` },
-    { name: 'Webpack', image: `${process.env.PUBLIC_URL}/assets/icons8-webpack.svg` },
+    { name: 'Docker', image: `${process.env.PUBLIC_URL}/assets/react.svg` },
+    { name: 'Jenkins', image: `${process.env.PUBLIC_URL}/assets/icons8-css3.svg` },
+    { name: 'GitHub', image: `${process.env.PUBLIC_URL}/assets/icons8-webpack.svg` },
     { name: 'MongoDB', image: `${process.env.PUBLIC_URL}/assets/mongodb.svg` },
-    { name: 'Express.js', image: `${process.env.PUBLIC_URL}/assets/icons8-express-js.svg` },
-    { name: 'Node.js', image: `${process.env.PUBLIC_URL}/assets/icons8-node-js.svg` },
-    { name: 'Java', image: `${process.env.PUBLIC_URL}/assets/icons8-java.svg` },
-    { name: 'Spring Boot', image: `${process.env.PUBLIC_URL}/assets/icons8-java.svg` },
+    { name: 'Cyber Security', image: `${process.env.PUBLIC_URL}/assets/icons8-express-js.svg` },
+    { name: 'Terraform', image: `${process.env.PUBLIC_URL}/assets/icons8-node-js.svg` },
+    { name: 'Ansible', image: `${process.env.PUBLIC_URL}/assets/icons8-java.svg` },
+    { name: 'CNCF', image: `${process.env.PUBLIC_URL}/assets/icons8-cncf.svg` },
     { name: 'MySQL', image: `${process.env.PUBLIC_URL}/assets/logo-mysql-170x115.png` },
   ];
 
