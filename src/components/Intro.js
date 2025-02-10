@@ -45,7 +45,7 @@ const Intro = () => {
 
         {isInView && (
           <Typist avgTypingDelay={100}>
-            <span className="intro-name">DevOps Engineer👩‍💻</span>
+            <span className="intro-name">DevOps Engineer</span>
             <Typist.Backspace count={15} delay={600} />
             <span className="intro-name">Problem Solver &#x1F609;</span>
             <Typist.Backspace count={20} delay={600} />
@@ -53,7 +53,7 @@ const Intro = () => {
             <Typist.Backspace count={17} delay={600} />
             <span className="intro-name">Cyber Security Engineer</span>
             <Typist.Backspace count={19} delay={600} />
-            <span className="intro-name">Full Stack Developer👩‍💻</span>
+            <span className="intro-name">Full Stack Developer</span>
           </Typist>
         )}
 
